@@ -25,7 +25,7 @@ def tim_uoc_so(n):
     # Chuyển về list và sắp xếp tăng dần cho dễ nhìn
     return sorted(list(uoc_so))
 
-# Nhập dữ liệu từ bàn phím
+
 try:
     N = int(input("Nhập số nguyên N: "))
     ket_qua = tim_uoc_so(N)
