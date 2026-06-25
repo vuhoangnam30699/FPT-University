@@ -12,16 +12,13 @@ def so_sanh_hai_file(file1, file2):
         with open(file1, 'r', encoding='utf-8') as f1, open(file2, 'r', encoding='utf-8') as f2:
             giong_nhau = True
             
-            # Sử dụng zip để duyệt song song
             for d1, d2 in zip(f1, f2):
                 if d1 != d2:
                     giong_nhau = False
                     break
                 
-            # Kiểm tra xem file có cùng số lượng dòng không
-            # Kiểm tra thêm f1 và f2 đã đọc hết chưa
+            
             if giong_nhau:
-                # Kiểm tra thêm trường hợp số dòng khác nhau
                 if f1.readline() != "" or f2.readline() != "":
                     giong_nhau = False
 

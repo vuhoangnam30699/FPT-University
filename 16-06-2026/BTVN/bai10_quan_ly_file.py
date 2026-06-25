@@ -12,28 +12,23 @@ các nhóm tăng dần bắt đầu từ 1
 import os
 
 def tim_cac_file_giong_nhau():
-    # Dictionary để lưu nội dung file làm key, danh sách tên file làm value
+    
     file_groups = {}
     
-    # Lấy danh sách tất cả các file trong thư mục hiện tại
     file_list = [f for f in os.listdir('.') if os.path.isfile(f)]
     
     for filename in file_list:
         try:
-            # Đọc nội dung file
             with open(filename, 'r', encoding='utf-8') as f:
                 content = f.read()
             
-            # Lưu vào dictionary: nếu nội dung đã tồn tại thì thêm tên file vào nhóm đó
             if content in file_groups:
                 file_groups[content].append(filename)
             else:
                 file_groups[content] = [filename]
         except Exception:
-            # Bỏ qua các file không đọc được (như file hình ảnh, file hệ thống...)
             continue
 
-    # Lọc và in ra các nhóm có từ 2 file trở lên
     count = 1
     
     da_co_nhom_trung = False
