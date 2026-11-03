@@ -1,9 +1,3 @@
-# ============================================================
-#  SO SÁNH THỰC NGHIỆM 3 THUẬT TOÁN THAY THẾ TRANG
-#  FIFO - LRU - Optimal trên CÙNG MỘT chuỗi tham chiếu
-#  Chạy: python so_sanh_thuc_nghiem.py
-#  (Đồ thị cần: pip install matplotlib — không có thì vẫn in bảng)
-# ============================================================
 import random
 
 # ---------- Cấu hình thí nghiệm ----------
